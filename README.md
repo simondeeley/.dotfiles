@@ -23,7 +23,7 @@ $ brew install stow
 First, check-out this dotfiles repository into the home directory using git
 
 ```
-$ git clone git@github.com/simondeeley/dotfiles.git
+$ git clone git@github.com/simondeeley/.dotfiles.git
 $ cd dotfiles
 ```
 
