@@ -28,13 +28,9 @@ if [ ! -d "$HOME/.dotfiles" ]; then
     git clone https://github.com/simondeeley/.dotfiles.git $HOME
 fi
 
-# Make sure we're in the right directory for the following commands to work
-# as expected
-cd $HOME/.dotfiles
-
 # stow dotfiles
-stow git -t $HOME
-stow zsh -t $HOME
+stow git -d $HOME/.dotfiles -t $HOME
+stow zsh -d $HOME/.dotfiles -t $HOME
 
 # Add zsh as a login shell
 command -v zsh | sudo tee -a /etc/shells
