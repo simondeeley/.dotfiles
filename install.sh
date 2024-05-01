@@ -26,8 +26,11 @@ nix-env -iA \
 # Clone this dotfiles repo to the home folder
 if [ ! -d "$HOME/.dotfiles" ]; then
     git clone https://github.com/simondeeley/.dotfiles.git $HOME
-    cd .dotfiles
 fi
+
+# Make sure we're in the right directory for the following commands to work
+# as expected
+cd $HOME/.dotfiles
 
 # stow dotfiles
 stow git -t $HOME
