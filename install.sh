@@ -45,7 +45,7 @@ source $HOME/.nix-profile/share/antidote/antidote
 antidote bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 
 # Initialise direnv
-eval "$(direnv hook zsh)"
+#eval "$(direnv hook zsh)"
 
 # Switch to ZSH
 exec zsh
