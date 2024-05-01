@@ -16,11 +16,18 @@ nix-channel --add https://nixos.org/channels/nixos-23.11 nixpkgs && nix-channel 
 # Install packages
 nix-env -iA \
 	nixpkgs.antidote \
+	nixpkgs.bat \
 	nixpkgs.git \
 	nixpkgs.tmux \
 	nixpkgs.fzf \
 	nixpkgs.direnv \
 	nixpkgs.nix-direnv
+
+# Clone this dotfiles repo to the home folder
+if [ ! -d "$HOME/.dotfiles" ]; then
+    git clone https://github.com/simondeeley/.dotfiles.git $HOME
+    cd .dotfiles
+fi
 
 # stow dotfiles
 stow git -t $HOME
