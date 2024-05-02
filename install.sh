@@ -42,10 +42,7 @@ sudo chsh -s $(which zsh) $USER
 source $HOME/.nix-profile/share/antidote/antidote
 
 # Load zsh plugins
-antidote bundle <$HOME/.zsh_plugins.txt >|$HOME/.zsh_plugins.sh
+antidote bundle < "$HOME/.zsh_plugins.txt" >| "$HOME/.zsh_plugins.sh"
 
 # Initialise direnv
 eval "$(direnv hook zsh)"
-
-# Switch to ZSH
-exec zsh
